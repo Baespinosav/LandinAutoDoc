@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #000000;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --iphone-color: #1c1c1e;
+    --iphone-border: #2c2c2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    margin-right: 1rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+main {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doc-preview {
+    margin-bottom: 2rem;
+}
+
+.iphone {
+    width: 300px;
+    height: 600px;
+    background-color: var(--iphone-color);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    border: 10px solid var(--iphone-border);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+
+.screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.download-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #333;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .doc-preview, .content {
+        flex: 0 1 auto;
+    }
+}
+
